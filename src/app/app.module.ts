@@ -1,13 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
+import { AddContactComponent } from './add-contact/add-contact.component';
+import { ContactComponent } from './contact/contact.component';
+import { EditContactComponent } from './edit-contact/edit-contact.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
+  declarations: [
+    AppComponent,
+    AddContactComponent,
+    ContactComponent,
+    EditContactComponent,
+  ],
+  bootstrap: [AppComponent],
+  providers: [],
 })
-export class AppModule { }
+export class AppModule {}
